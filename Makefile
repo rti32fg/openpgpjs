@@ -28,6 +28,41 @@ SHELL=bash
 _PROJECT=openpgpjs
 _PROJECT_NPM=@themartiancompany/$(_PROJECT)
 
+NPM_FILES=\
+  "dist" \
+  "lightweight"
+  "COPYING" \
+  "AUTHORS.rst" \
+  "SECURITY.md" \
+  "Makefile" \
+  "dist" \
+  "evm-contract-call" \
+  "evm-contract-call.webpack.config.cjs" \
+  "evm-contract-deployment-address" \
+  "evm-contract-deployment-address.webpack.config.cjs" \
+  "evm-contract-deployment-networks" \
+  "evm-contract-deployment-networks.webpack.config.cjs" \
+  "evm-contract-deployment-versions" \
+  "evm-contract-deployment-versions.webpack.config.cjs" \
+  "evm-contract-deployments-dir" \
+  "evm-contract-deployments-dir.webpack.config.cjs" \
+  "lib" \
+  "libevm-contract-call" \
+  "libevm-contract-call.webpack.config.cjs" \
+  "libevm-contract-deployment-address" \
+  "libevm-contract-deployment-address.webpack.config.cjs" \
+  "libevm-contract-deployment-networks" \
+  "libevm-contract-deployment-networks.webpack.config.cjs" \
+  "libevm-contract-deployment-versions" \
+  "libevm-contract-deployment-versions.webpack.config.cjs" \
+  "libevm-contract-deployments-dir" \
+  "libevm-contract-deployments-dir.webpack.config.cjs" \
+  "$(_PROJECT_NPM)" \
+  "eslint.config.mjs" \
+  "fs-worker.webpack.config.cjs" \
+  "package.json" \
+  "webpack.config.cjs"
+
 all: build-npm
 
 build-npm:
