@@ -71,17 +71,17 @@
   ],
   "scripts": {
     "build":
-      "rollup --config",
+      "npx rollup --config --extend",
     "build-types":
       "rm -rf dist/types; tsc --project tsconfig.dist.json; cpy 'src/**/*.d.ts' 'dist/types'",
     "build-test":
       "npm run build -- --config-build-only=test",
     "prepare":
-      "npm run build && npm run build-types",
+      "npm run build; npm run build-types",
     "test":
       "mocha --timeout 120000 test/unittests.js",
     "test-type-definitions":
-      "tsc --project test/typescript/tsconfig.test.json && ts-node --project test/typescript/tsconfig.test.json test/typescript/definitions.ts",
+      "tsc --project test/typescript/tsconfig.test.json; ts-node --project test/typescript/tsconfig.test.json test/typescript/definitions.ts",
     "benchmark-time":
       "node test/benchmarks/time.js",
     "benchmark-memory-usage":
@@ -101,13 +101,13 @@
     "lint":
       "eslint .",
     "docs":
-      "jsdoc --configure .jsdocrc.cjs --destination docs && printf '%s' 'docs.openpgpjs.org' > docs/CNAME",
+      "jsdoc --configure .jsdocrc.cjs --destination docs; printf '%s' 'docs.openpgpjs.org' > docs/CNAME",
     "preversion":
-      "rm -rf dist docs node_modules && npm ci && npm test",
+      "rm -rf dist docs node_modules; npm ci; npm test",
     "version":
-      "npm run docs && git add -A docs",
+      "npm run docs; git add -A docs",
     "postversion":
-      "git push --follow-tags && npm publish"
+      "git push --follow-tags; npm publish"
   },
   "devDependencies": {
     "@eslint/js":
