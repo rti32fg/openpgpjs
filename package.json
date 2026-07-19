@@ -1,6 +1,6 @@
 {
   "name":
-    "@themartiancompany/openpgp",
+    "@themartiancompany/openpgpjs",
   "description":
     "OpenPGP.js is a Javascript implementation of the OpenPGP protocol. This is defined in RFC 4880 (temporary pqc packaging).",
   "version":
@@ -218,6 +218,8 @@
     }
   },
   "overrides": {
+    "openpgpjs":
+      "./dist/node/openpgp.min.cjs",
     "@web/dev-server-core":
       "npm:@openpgp/wtr-dev-server-core@0.7.3-patch.1",
     "@web/test-runner-core":
