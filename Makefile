@@ -24,6 +24,10 @@
 #    along with this program.
 #    If not, see <https://www.gnu.org/licenses/>.
 
+SHELL=bash
+_PROJECT=openpgpjs
+_PROJECT_NPM=@themartiancompany/$(_PROJECT)
+
 all: build-npm
 
 build-npm:
