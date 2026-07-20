@@ -26,7 +26,7 @@
 
 SHELL=bash
 _PROJECT=openpgpjs
-_PROJECT_NPM=@themartiancompany/$(_PROJECT)
+_PROJECT_NPM=@themartiancompany-$(_PROJECT)
 
 NPM_FILES=\
   "AUTHORS.rst" \
