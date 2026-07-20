@@ -66,14 +66,31 @@ build-npm:
 	      "$${_file}" \
 	      "build"; \
 	  fi; \
-	done
+	done; \
+	cd \
+	  "build"; \
 	npm \
 	  install \
 	    --legacy-peer-deps \
-	    --include="dev"
+	    --include="dev"; \
+	npm \
+	  run \
+	    "build"; \
+	npm \
+	  pack; \
+	mv \
+	  "$(_PROJECT_NPM)-$${_version}.tgz" \
+	  ".."
 
 publish-npm:
 
+	( cd \
+	    "$${PWD}/build" || \
+	  make \
+	    build-npm ) && \
+	( cd \
+	    "build" || \
+	  true ); \
 	npm \
 	  publish \
 	  --access="public"
