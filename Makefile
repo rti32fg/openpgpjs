@@ -44,10 +44,6 @@ NPM_FILES=\
   "dist" \
   "lightweight" \
   "update_deps.sh"
-AUTHORS.rst  SECURITY.md       package-lock.json  src                 update_deps.sh
-LICENSE      docs              package.json       test
-Makefile     eslint.config.js  package.json.new   tsconfig.dist.json
-README.md    lightweight       rollup.config.js   tsconfig.json
 
 all: build-npm
 
