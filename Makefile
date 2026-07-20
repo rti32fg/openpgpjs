@@ -69,6 +69,11 @@ build-npm:
 	done; \
 	cd \
 	  "build"; \
+	_version="$$( \
+	  npm \
+	    view \
+	      "$${PWD}" \
+	      "version")"; \
 	npm \
 	  install \
 	    --legacy-peer-deps \
